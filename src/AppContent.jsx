@@ -142,7 +142,7 @@ function AppContent() {
           <Button href="https://www.instagram.com/bandwolfcreek/" target="_blank" rel="noopener noreferrer">
             <i className="fab fa-instagram"></i> Instagram
           </Button>
-          <Button href="https://wa.me/5554981167717" target="_blank" rel="noopener noreferrer">
+          <Button href="https://wa.me/555496418413" target="_blank" rel="noopener noreferrer">
             <i className="fab fa-whatsapp"></i> WhatsApp
           </Button>
           <ImageGallery>
