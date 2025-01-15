@@ -2,9 +2,11 @@ import React from "react";
 import styled, { createGlobalStyle } from "styled-components";
 import perfil from "./assets/perfil.jpg";
 import capa from "./assets/capa.jpg";
+import show1 from "./assets/show1.jpg";
+import estudio1 from "./assets/estudio1.jpg";
 
 const GlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=Rock+Salt&family=Oswald:wght@700&family=Anton&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@600&family=Open+Sans:wght@400;700&display=swap');
 `;
 
 const Container = styled.div`
@@ -19,7 +21,7 @@ const Container = styled.div`
 
 const Card = styled.div`
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
   background: linear-gradient(135deg, #333, #444);
   border-radius: 10px;
   overflow: hidden;
@@ -62,8 +64,8 @@ const Logo = styled.div`
 `;
 
 const BandName = styled.h2`
-  font-size: 30px;
-  font-family: 'Rock Salt', cursive;
+  font-size: 32px;
+  font-family: 'Lobster', cursive;
   font-weight: normal;
   margin: 60px 0 10px 0;
   text-transform: uppercase;
@@ -72,9 +74,9 @@ const BandName = styled.h2`
 
 const Genre = styled.p`
   font-size: 20px;
-  margin: 0px 0 20px 0; 
-  font-family: 'Oswald', sans-serif;
-  font-weight: bold;
+  margin: 0px 0 20px 0;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
   font-style: italic;
   letter-spacing: 1px;
 `;
@@ -93,9 +95,9 @@ const Button = styled.a`
   text-decoration: none;
   border-radius: 5px;
   border: 2px solid #fff;
-  font-family: 'Anton', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 600;
   cursor: pointer;
   transition: 0.3s;
 
@@ -106,6 +108,23 @@ const Button = styled.a`
   i {
     margin-right: 8px;
   }
+`;
+
+const ImageGallery = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  padding: 20px;
+`;
+
+const Image = styled.img`
+  width: 90%;
+  max-width: 450px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+  margin: 0 auto;
 `;
 
 function AppContent() {
@@ -120,18 +139,16 @@ function AppContent() {
           <Logo />
           <BandName>Wolf Creek</BandName>
           <Genre>Hard Rock</Genre>
-          <Button href="https://spotify.com" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-spotify"></i> Spotify
-          </Button>
-          <Button href="https://youtube.com" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-youtube"></i> YouTube
-          </Button>
-          <Button href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+          <Button href="https://www.instagram.com/bandwolfcreek/" target="_blank" rel="noopener noreferrer">
             <i className="fab fa-instagram"></i> Instagram
           </Button>
-          <Button href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-facebook"></i> Facebook
+          <Button href="https://wa.me/5554981167717" target="_blank" rel="noopener noreferrer">
+            <i className="fab fa-whatsapp"></i> WhatsApp
           </Button>
+          <ImageGallery>
+            <Image src={show1} alt="Show 1" />
+            <Image src={estudio1} alt="Estúdio 1" />
+          </ImageGallery>
         </Card>
       </Container>
     </>
