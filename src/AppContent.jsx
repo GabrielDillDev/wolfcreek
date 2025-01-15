@@ -64,12 +64,12 @@ const Logo = styled.div`
 `;
 
 const BandName = styled.h2`
-  font-size: 32px;
-  font-family: 'Lobster', cursive;
+  font-size: 30px;
+  font-family: 'Lobster', sans-serif;
   font-weight: normal;
   margin: 60px 0 10px 0;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 `;
 
 const Genre = styled.p`
