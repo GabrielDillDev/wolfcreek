@@ -4,6 +4,8 @@ import perfil from "./assets/perfil.jpg";
 import capa from "./assets/capa.jpg";
 import show1 from "./assets/show1.jpg";
 import estudio1 from "./assets/estudio1.jpg";
+import video1 from "./assets/1.mp4";
+import video2 from "./assets/2.mp4";
 
 const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@600&family=Open+Sans:wght@400;700&display=swap');
@@ -110,12 +112,20 @@ const Button = styled.a`
   }
 `;
 
-const ImageGallery = styled.div`
+const MediaGallery = styled.div`
   display: flex;
   flex-direction: column;
   gap: 15px;
   width: 100%;
   padding: 20px;
+`;
+
+const Media = styled.video`
+  width: 90%;
+  max-width: 450px;
+  height: auto;
+  border-radius: 10px;
+  margin: 0 auto;
 `;
 
 const Image = styled.img`
@@ -145,10 +155,18 @@ function AppContent() {
           <Button href="https://wa.me/555496418413" target="_blank" rel="noopener noreferrer">
             <i className="fab fa-whatsapp"></i> WhatsApp
           </Button>
-          <ImageGallery>
+          <MediaGallery>
+            <Media controls>
+              <source src={video1} type="video/mp4" />
+              Seu navegador não suporta o elemento de vídeo.
+            </Media>
+            <Media controls>
+              <source src={video2} type="video/mp4" />
+              Seu navegador não suporta o elemento de vídeo.
+            </Media>
             <Image src={show1} alt="Show 1" />
             <Image src={estudio1} alt="Estúdio 1" />
-          </ImageGallery>
+          </MediaGallery>
         </Card>
       </Container>
     </>
